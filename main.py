@@ -111,6 +111,13 @@ class CaptureThread(QThread):
                         self.running = False
                         break
                     
+                    # FIX: Detect if window is minimized (Iconic)
+                    # If it's minimized, Windows usually stops rendering it.
+                    # We skip capture to keep the "Last Frame" instead of showing black.
+                    if win32gui.IsIconic(self.hwnd):
+                        time.sleep(0.5) # Wait longer while minimized
+                        continue
+                    
                     qimage = self.capture_window_background(self.hwnd)
                 
                 elif self.region:
