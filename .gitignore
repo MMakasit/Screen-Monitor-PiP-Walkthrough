@@ -4,16 +4,9 @@ __pycache__/
 *$py.class
 
 # PyInstaller
-#  Normally these are created by a PyInstaller build, and can be removed
 build/
 dist/
 *.spec
-
-# Artifacts
-brain/
-implementation_plan.md
-task.md
-walkthrough.md
 
 # OS generated files
 .DS_Store

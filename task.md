@@ -1,0 +1,42 @@
+# Task: Screen Capture PiP (Picture-in-Picture)
+
+- [ ] Deployment: EXE Build & GitHub Upload [/]
+    - [x] Install PyInstaller
+    - [x] Build standalone EXE (--onefile, --windowed)
+    - [x] Initialize Git repository
+    - [/] Sync all documentation and artifacts to GitHub
+    - [x] Push code and artifacts to GitHub
+
+- [x] Bug Fix: Image Corruption (Grayscale/Skew) [x]
+    - [x] Analyze bitmap stride and bit-depth mismatch
+    - [x] Update capture logic to handle DIB sections and correct stride
+    - [x] Test alternative capture flags for DirectX/Hardware accelerated windows
+- [x] Bug Fix: Window Expansion [x]
+    - [x] Research PyQt6 DPI scaling issues on Windows
+    - [x] Disable manual DPI scaling and test
+    - [x] Fix QLabel size policy to prevent expansion loop
+
+- [x] Planning and Design [x]
+    - [x] Research requirements
+    - [x] Create implementation plan
+- [x] Feature: Window Selection Selection [x]
+    - [x] Research pywin32 window enumeration
+    - [x] Create Window Selection UI (Dropdown)
+    - [x] Integrate auto-tracking of selected window
+- [x] Feature: Background Window Capture [x]
+    - [x] Research PrintWindow and BitBlt methods
+    - [x] Implement hidden window capture logic
+    - [x] Handle minimized window states (Detection & Feedback)
+    - [x] Verify capture for GPU-accelerated apps (Chrome/Games)
+- [x] Core Implementation [x]
+    - [x] Setup PyQt6 Base Window (Always on top, borderless)
+    - [x] Implement Window Dragging & Resizing
+    - [x] Implement Screen Capture Loop (mss)
+    - [x] Add Region Selection UI
+- [ ] Verification [/]
+    - [x] Basic functionality check
+    - [x] Window tracking verification
+    - [ ] Covered window capture test
+    - [ ] Minimized window capture test
+    - [ ] Performance optimization
+    - [ ] User review
